@@ -1,0 +1,241 @@
+{
+ "skipped": 3,
+ "results": {
+  "/Applications/小米互联服务.app/Contents/_CodeSignature/CodeResources": {
+   "TWS": 1,
+   "tws": 2
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/app.asar": {
+   "fe95": 15,
+   "180f": 17,
+   "TWS": 4,
+   "tws": 11,
+   "SPP": 9,
+   "电量": 6
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/app.asar.unpacked/dist-electron/vendor/ripgrep/x64-darwin/rg": {
+   "tws": 2
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/app.asar.unpacked/dist-electron/vendor/ripgrep/arm64-darwin/rg": {
+   "tws": 2,
+   "SPP": 2
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/app.asar.unpacked/node_modules/better-sqlite3/deps/sqlite3/sqlite3.c": {
+   "038F": 1,
+   "tws": 2
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/app.asar.unpacked/node_modules/better-sqlite3/build/Release/better_sqlite3.node": {
+   "tws": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/app.asar.unpacked/node_modules/@img/sharp-libvips-darwin-arm64/lib/libvips-cpp.42.dylib": {
+   "gatt": 1,
+   "tws": 1,
+   "SPP": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/device-collaboration/SKILL.md": {
+   "电量": 2
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/canvas-design/canvas-fonts/IBMPlexMono-Bold.ttf": {
+   "SPP": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/pptx/node_modules/playwright-core/types/types.d.ts": {
+   "Headset": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/pptx/node_modules/playwright-core/types/protocol.d.ts": {
+   "GATT": 19,
+   "gatt": 5,
+   "SPP": 2
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/pptx/node_modules/playwright-core/lib/server/dispatchers/androidDispatcher.js": {
+   "Headset": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/pptx/node_modules/playwright-core/lib/vite/traceViewer/assets/codeMirrorModule-a5XoALAZ.js": {
+   "tws": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/pptx/node_modules/playwright-core/lib/vite/recorder/assets/codeMirrorModule-DadYNm1I.js": {
+   "tws": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/pptx/node_modules/playwright-core/lib/vite/htmlReport/index.html": {
+   "tws": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/pptx/node_modules/playwright/lib/common/expectBundleImpl.js": {
+   "180F": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/pptx/node_modules/playwright/lib/transform/babelBundleImpl.js": {
+   "180F": 2
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/pptx/node_modules/@img/sharp-libvips-darwin-arm64/lib/libvips-cpp.8.17.3.dylib": {
+   "gatt": 1,
+   "tws": 1,
+   "SPP": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/web-search/node_modules/playwright-core/types/types.d.ts": {
+   "Headset": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/web-search/node_modules/playwright-core/types/protocol.d.ts": {
+   "GATT": 19,
+   "gatt": 5,
+   "SPP": 2
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/web-search/node_modules/playwright-core/lib/server/dispatchers/androidDispatcher.js": {
+   "Headset": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/web-search/node_modules/playwright-core/lib/vite/traceViewer/assets/codeMirrorModule-a5XoALAZ.js": {
+   "tws": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/web-search/node_modules/playwright-core/lib/vite/recorder/assets/codeMirrorModule-DadYNm1I.js": {
+   "tws": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/web-search/node_modules/playwright-core/lib/vite/htmlReport/index.html": {
+   "tws": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/web-search/node_modules/typescript/lib/lib.dom.d.ts": {
+   "headset": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/web-search/node_modules/parse5/node_modules/entities/dist/esm/generated/decode-data-html.js": {
+   "180f": 2
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/web-search/node_modules/parse5/node_modules/entities/dist/commonjs/generated/decode-data-html.js": {
+   "180f": 2
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/web-search/node_modules/parse5/node_modules/entities/src/generated/decode-data-html.ts": {
+   "180f": 2
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/web-search/node_modules/entities/lib/generated/decode-data-html.js": {
+   "180f": 2
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/web-search/node_modules/entities/lib/esm/generated/decode-data-html.js": {
+   "180f": 2
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/convert/node_modules/playwright-core/types/types.d.ts": {
+   "Headset": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/convert/node_modules/playwright-core/types/protocol.d.ts": {
+   "GATT": 19,
+   "gatt": 5,
+   "SPP": 2
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/convert/node_modules/playwright-core/lib/server/dispatchers/androidDispatcher.js": {
+   "Headset": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/convert/node_modules/playwright-core/lib/vite/traceViewer/assets/codeMirrorModule-a5XoALAZ.js": {
+   "tws": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/convert/node_modules/playwright-core/lib/vite/recorder/assets/codeMirrorModule-DadYNm1I.js": {
+   "tws": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/convert/node_modules/playwright-core/lib/vite/htmlReport/index.html": {
+   "tws": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/convert/node_modules/playwright/lib/common/expectBundleImpl.js": {
+   "180F": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/SKILLs/convert/node_modules/playwright/lib/transform/babelBundleImpl.js": {
+   "180F": 2
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/ripgrep/x64-darwin/rg": {
+   "tws": 2
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/ripgrep/arm64-darwin/rg": {
+   "tws": 2,
+   "SPP": 2
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/hyperconnect-addon/frameworks/dist_clipboard.framework/dist_clipboard": {
+   "tws": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/hyperconnect-addon/frameworks/dist_clipboard.framework/Versions/A/dist_clipboard": {
+   "tws": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/hyperconnect-addon/frameworks/micontinuity_sdk.framework/micontinuity_sdk": {
+   "gatt": 70,
+   "rfcomm": 15,
+   "a2dp": 6
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/hyperconnect-addon/frameworks/micontinuity_sdk.framework/Versions/A/micontinuity_sdk": {
+   "gatt": 70,
+   "rfcomm": 15,
+   "a2dp": 6
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/hyperconnect-addon/frameworks/dist_hw_srv.framework/dist_hw_srv": {
+   "Headset": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/hyperconnect-addon/frameworks/dist_hw_srv.framework/Versions/A/dist_hw_srv": {
+   "Headset": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/hyperconnect-addon/frameworks/QRCode.framework/QRCode": {
+   "038F": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/hyperconnect-addon/frameworks/QRCode.framework/Versions/A/QRCode": {
+   "038F": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/hyperconnect-addon/frameworks/HyperConnectSDK.framework/HyperConnectSDK": {
+   "SPP": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/hyperconnect-addon/frameworks/HyperConnectSDK.framework/Versions/A/HyperConnectSDK": {
+   "SPP": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/hyperconnect-addon/frameworks/HyperConnectSDK.framework/Versions/A/_CodeSignature/CodeResources": {
+   "tws": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/hyperconnect-addon/frameworks/HyperConnectSDK.framework/Versions/A/Resources/HCCommonUI.bundle/Contents/Resources/zh-Hans.lproj/Localizable.strings": {
+   "电量": 3
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/hyperconnect-addon/frameworks/Lottie.framework/Lottie": {
+   "TWS": 2
+  },
+  "/Applications/小米互联服务.app/Contents/Resources/hyperconnect-addon/frameworks/Lottie.framework/Versions/A/Lottie": {
+   "TWS": 2
+  },
+  "/Applications/小米互联服务.app/Contents/Frameworks/Electron Framework.framework/Electron Framework": {
+   "038F": 1,
+   "GATT": 61,
+   "gatt": 23,
+   "180f": 1,
+   "earbud": 1,
+   "buds": 1,
+   "TWS": 5,
+   "tws": 3,
+   "headset": 5,
+   "Headset": 57,
+   "RFCOMM": 11,
+   "rfcomm": 12,
+   "SPP": 3
+  },
+  "/Applications/小米互联服务.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Electron Framework": {
+   "038F": 1,
+   "GATT": 61,
+   "gatt": 23,
+   "180f": 1,
+   "earbud": 1,
+   "buds": 1,
+   "TWS": 5,
+   "tws": 3,
+   "headset": 5,
+   "Headset": 57,
+   "RFCOMM": 11,
+   "rfcomm": 12,
+   "SPP": 3
+  },
+  "/Applications/小米互联服务.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/icudtl.dat": {
+   "TWS": 2
+  },
+  "/Applications/小米互联服务.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/resources.pak": {
+   "SPP": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en.lproj/locale.pak": {
+   "headset": 2,
+   "Headset": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_CN.lproj/locale.pak": {
+   "耳机": 2,
+   "电量": 5
+  },
+  "/Applications/小米互联服务.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en_GB.lproj/locale.pak": {
+   "headset": 2,
+   "Headset": 1
+  },
+  "/Applications/小米互联服务.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libvk_swiftshader.dylib": {
+   "TWS": 1
+  }
+ }
+}

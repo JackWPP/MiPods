@@ -1,0 +1,39 @@
+# ---- Swift / SPM ----
+.build/
+.swiftpm/
+Package.resolved
+*.xcodeproj/
+*.xcworkspace/
+DerivedData/
+
+# ---- packaged app ----
+app/MiPods/MiPods.app/
+*.app/
+
+# ---- compiled probe binaries ----
+# Probe *sources* are committed; the executables built from them are not.
+tools/bleprobe/bleprobe
+tools/bleprobe/gatt
+tools/bleprobe/gatt2
+tools/bleprobe/miwear
+tools/bleprobe/miwear2
+tools/bleprobe/scan
+tools/bleprobe/scan3
+tools/bleprobe/probe*
+tools/audioprobe/audioprobe
+research/rea/live/*.build
+research/record/*/*
+!research/record/*/*.swift
+!research/record/*/*.log
+research/record/*/*/*.build
+
+# ---- logs & OS noise ----
+*.log
+!.gitkeep
+!research/record/finalp/final_probe.log
+!research/record/p0p1/p0p1.log
+.DS_Store
+
+# ---- local secrets ----
+.env
+*.local

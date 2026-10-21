@@ -1,0 +1,88 @@
+[found] Xiaomi 耳夹式耳机
+[conn] connected
+[gatt] AF07+AF08 ready
+
+===== STARTING P0/P1 EXPERIMENTS (13 steps) =====
+
+--- [1/13] P1-idle10s: send nothing, watch for buds-initiated 0x50 ---
+  <== NOTIFY op=0xF4 seq=0x01 st=-- payload=03000C03
+  ==> SEND op=0xF4 FEDCBA04F400020001EF
+  >>> VERDICT P1-idle10s: send nothing, watch for buds-initiated 0x50: TRAFFIC(1)
+VERDICT P1-idle10s: send nothing, watch for buds-initiated 0x50: TRAFFIC(1)   <== NOTIFY op=0xF4 seq=0x01 st=-- payload=03000C03
+
+--- [2/13] P0-a baseline GET_DEVICE_INFO 0x02 ---
+  ==> SEND op=0x02 FEDCBAC402000500FFFFFFFFEF
+  >>> VERDICT P0-a baseline GET_DEVICE_INFO 0x02: NO-RESPONSE
+VERDICT P0-a baseline GET_DEVICE_INFO 0x02: NO-RESPONSE 
+
+--- [3/13] P0-b GET_CONFIG 70 capacity => payload [00 46] ---
+  ==> SEND op=0xF3 FEDCBAC4F30003010046EF
+  >>> VERDICT P0-b GET_CONFIG 70 capacity => payload [00 46]: NO-RESPONSE
+VERDICT P0-b GET_CONFIG 70 capacity => payload [00 46]: NO-RESPONSE 
+
+--- [4/13] P0-b GET_CONFIG 69 list => payload [00 45] ---
+  ==> SEND op=0xF3 FEDCBAC4F30003020045EF
+  >>> VERDICT P0-b GET_CONFIG 69 list => payload [00 45]: NO-RESPONSE
+VERDICT P0-b GET_CONFIG 69 list => payload [00 45]: NO-RESPONSE 
+
+--- [5/13] P0-b GET_CONFIG 68 status => payload [00 44] ---
+  ==> SEND op=0xF3 FEDCBAC4F30003030044EF
+  >>> VERDICT P0-b GET_CONFIG 68 status => payload [00 44]: NO-RESPONSE
+VERDICT P0-b GET_CONFIG 68 status => payload [00 44]: NO-RESPONSE 
+
+--- [6/13] P0-b GET_CONFIG 75 recordctl => payload [00 4B] ---
+  ==> SEND op=0xF3 FEDCBAC4F3000304004BEF
+  >>> VERDICT P0-b GET_CONFIG 75 recordctl => payload [00 4B]: NO-RESPONSE
+VERDICT P0-b GET_CONFIG 75 recordctl => payload [00 4B]: NO-RESPONSE 
+
+--- [7/13] P0-b GET_CONFIG 52 bigfile => payload [00 34] ---
+  ==> SEND op=0xF3 FEDCBAC4F30003050034EF
+  >>> VERDICT P0-b GET_CONFIG 52 bigfile => payload [00 34]: NO-RESPONSE
+VERDICT P0-b GET_CONFIG 52 bigfile => payload [00 34]: NO-RESPONSE 
+
+--- [8/13] P0-c GET_CONFIG 70 variant [01 00 46] ---
+  ==> SEND op=0xF3 FEDCBAC4F3000406010046EF
+  >>> VERDICT P0-c GET_CONFIG 70 variant [01 00 46]: NO-RESPONSE
+VERDICT P0-c GET_CONFIG 70 variant [01 00 46]: NO-RESPONSE 
+
+--- [9/13] P0-d GET_CONFIG 70 variant [02 00 46] ---
+  ==> SEND op=0xF3 FEDCBAC4F3000407020046EF
+[conn] DISCONNECTED 
+  >>> VERDICT P0-d GET_CONFIG 70 variant [02 00 46]: NO-RESPONSE
+VERDICT P0-d GET_CONFIG 70 variant [02 00 46]: NO-RESPONSE 
+
+--- [10/13] P0-e GET_CONFIG multi 70+69+68 ---
+  ==> SEND op=0xF3 FEDCBAC4F3000708004600450044EF
+  >>> VERDICT P0-e GET_CONFIG multi 70+69+68: NO-RESPONSE
+VERDICT P0-e GET_CONFIG multi 70+69+68: NO-RESPONSE 
+
+--- [11/13] P1 AUTH 0x50 challenge [01][16B] ---
+  ==> SEND op=0x50 FEDCBAC450001209017EF364088EAFE80F604387D967279001EF
+  >>> VERDICT P1 AUTH 0x50 challenge [01][16B]: NO-RESPONSE
+VERDICT P1 AUTH 0x50 challenge [01][16B]: NO-RESPONSE 
+
+--- [12/13] P0-f GET_CONFIG 70 AFTER auth attempt ---
+  ==> SEND op=0xF3 FEDCBAC4F300030A0046EF
+  >>> VERDICT P0-f GET_CONFIG 70 AFTER auth attempt: NO-RESPONSE
+VERDICT P0-f GET_CONFIG 70 AFTER auth attempt: NO-RESPONSE 
+
+--- [13/13] P0-g control GET_RUN_INFO 0x09 ---
+  ==> SEND op=0x09 FEDCBAC40900050BFFFFFFFFEF
+  >>> VERDICT P0-g control GET_RUN_INFO 0x09: NO-RESPONSE
+VERDICT P0-g control GET_RUN_INFO 0x09: NO-RESPONSE 
+
+
+========== SUMMARY ==========
+VERDICT P1-idle10s: send nothing, watch for buds-initiated 0x50: TRAFFIC(1)   <== NOTIFY op=0xF4 seq=0x01 st=-- payload=03000C03
+VERDICT P0-a baseline GET_DEVICE_INFO 0x02: NO-RESPONSE 
+VERDICT P0-b GET_CONFIG 70 capacity => payload [00 46]: NO-RESPONSE 
+VERDICT P0-b GET_CONFIG 69 list => payload [00 45]: NO-RESPONSE 
+VERDICT P0-b GET_CONFIG 68 status => payload [00 44]: NO-RESPONSE 
+VERDICT P0-b GET_CONFIG 75 recordctl => payload [00 4B]: NO-RESPONSE 
+VERDICT P0-b GET_CONFIG 52 bigfile => payload [00 34]: NO-RESPONSE 
+VERDICT P0-c GET_CONFIG 70 variant [01 00 46]: NO-RESPONSE 
+VERDICT P0-d GET_CONFIG 70 variant [02 00 46]: NO-RESPONSE 
+VERDICT P0-e GET_CONFIG multi 70+69+68: NO-RESPONSE 
+VERDICT P1 AUTH 0x50 challenge [01][16B]: NO-RESPONSE 
+VERDICT P0-f GET_CONFIG 70 AFTER auth attempt: NO-RESPONSE 
+VERDICT P0-g control GET_RUN_INFO 0x09: NO-RESPONSE 
