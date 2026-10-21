@@ -126,16 +126,31 @@ Touch Bar 控制，全部通过逆向出的 BLE 协议实现，不依赖任何�
 
 ## 安装
 
-需要 **macOS 14+** 和 **Xcode**（不是只装 Command Line Tools —— CLT 缺 SwiftUI 宏插件）。
+### 直接下载
+
+去 [Releases](https://github.com/JackWPP/MiPods/releases/latest) 下载 `MiPods-v*.zip`，
+解压后把 `MiPods.app` 拖进 `/Applications`。通用二进制（Apple Silicon + Intel），需要 **macOS 14+**。
+
+> **首次打开会被 Gatekeeper 拦**（未公证，个人项目没有 Apple 开发者账号）。
+> 右键点 App → 打开，或执行：
+> ```bash
+> xattr -dr com.apple.quarantine /Applications/MiPods.app
+> ```
+
+### 从源码构建
+
+需要 **Xcode**（不能只装 Command Line Tools —— CLT 缺 SwiftUI 宏插件，
+`@State` 会直接编译失败）。
 
 ```bash
 git clone https://github.com/JackWPP/MiPods.git
 cd MiPods/app/MiPods
-make app      # 构建 + 打包成 .app
-make run      # 启动
+make app     # 构建 + 打包成 .app
+make run     # 启动
+make test    # 跑协议回归测试
 ```
 
-首次启动会请求蓝牙权限。装好后它只住在菜单栏，没有 Dock 图标。
+首次启动会请求蓝牙权限。装好后只住在菜单栏，没有 Dock 图标。
 
 ## 构建
 
