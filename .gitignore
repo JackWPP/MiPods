@@ -37,3 +37,8 @@ research/record/*/*/*.build
 # ---- local secrets ----
 .env
 *.local
+
+# ---- 原始蓝牙抓包含本机与其他设备 MAC，不入库 ----
+research/record/capture/*.log
+research/record/capture/bugreport*
+*.m4a
