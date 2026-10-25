@@ -155,3 +155,71 @@ python3 tools/btsnoop/extract_miwear.py /tmp/btsnoop/btsnoop_hci_*.log
 | `GET_CONFIG(70)` 容量 | 面板显示「剩余可录时长」 | 同上，发 `F3` 查 0x46 |
 | `subcmd=1` 起始请求 | 自己实现下载时要知道 start 参数 | 抓包中该帧在 t≈127s 之前，本次提取未覆盖到，下次从更早开始抓 |
 | 音频编码确认 | 决定解码器 | 从 config 69 的 `RECORD_FORMAT` 得到 |
+
+---
+
+## 6. 🎯 编码格式已确定并实证解码成功（决定性）
+
+### 6.1 耳机录音用的是 LC3
+
+从手机 APK（`com.mi.earphone` 1.38.0）拿到两个关键类：
+
+```java
+// AudioCodecConfig
+FORMAT_LC3  = 1
+FORMAT_OPUS = 2
+
+// AudioCodecInfo
+getLC3() → ("", "LC3", 16000, 1, 16, null, 10000, 20, 320)
+getOGG() → ("", "ogg", 16000, 1, 16, null, 20000, 40, <n>)
+//          地址 标签   采样率 声道 位深 frameBps 帧时长us 帧字节 解码样点
+```
+
+设备通过 **`GET_CONFIG(0x56 = 86)`** 上报编解码器头（对应 `AudioCodecHeader` 类），
+抓包中拿到的实际值：
+
+```
+format = 01 (LC3)          version = "LC3-V001"
+采样率 = 16000  声道 = 1  位深 = 16
+profile A: bitrate=32000  frameSize=40  decFrameSize=320
+profile B: bitrate=16000  frameSize=20  decFrameSize=320
+```
+
+实测码率 **32.4 kbps** 正好对应 profile A ⇒ **LC3 / 16000 Hz / 单声道 / 40 字节每帧 / 10 ms**。
+
+### 6.2 解码实证
+
+`tools/lc3/lc3dec.c` 用 Google liblc3 解码裸流：
+
+```bash
+brew install liblc3
+cc -O2 -o lc3dec lc3dec.c -I$(brew --prefix liblc3)/include -L$(brew --prefix liblc3)/lib -llc3
+./lc3dec recording.bin out.wav 40 16000
+```
+
+结果：两条录音**全程 `plc=0 err=0`**（无丢帧补偿、无解码错误）。
+
+与手机端转码出的 AAC 做包络互相关（每 10ms 一帧 RMS）：
+
+| 录音 | LC3 帧 | AAC 帧 | 最佳对齐 | 相关系数 |
+|---|---|---|---|---|
+| 12.3 s | 1227 | 1222 | −13 帧（130 ms） | **0.9606** |
+| 14.1 s | 1407 | 1407 | −13 帧（130 ms） | **0.9285** |
+
+两条录音延迟一致都是 130 ms（编解码/封装的固定延迟），相关度 0.93–0.96
+⇒ **确认是同一段音频，LC3 解码正确。**
+
+### 6.3 为什么之前和 m4a 对不上
+
+手机 App 的流水线是「**解码 LC3 → 编码 AAC → 写 ADTS 文件**」（`AudioCodecImpl.encodeConvertAAC()`），
+所以 `.m4a` 里是**转码后**的数据，和 BLE 原始字节不存在任何公共子串（实测 8 字节窗口零命中）。
+
+**不要再用 m4a 当基准去比对抓包字节** —— 这是上一轮判断"可能加密"的原因，实际既没加密也没封装差异，
+是转码。
+
+### 6.4 macOS 端落地要点
+
+1. 下载到的是**裸 LC3 帧流**，没有容器、没有头
+2. 每帧固定 40 字节、10 ms、16000 Hz 单声道 → 160 样点
+3. 用 liblc3 解码成 PCM，再按需要转 WAV/AAC
+4. 若要写文件给用户，建议解码后转 m4a/AAC（系统原生可播），或存 WAV
